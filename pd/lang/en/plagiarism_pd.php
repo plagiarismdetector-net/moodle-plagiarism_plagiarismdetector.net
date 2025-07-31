@@ -40,6 +40,7 @@ $string['queued'] = 'Queued';
 $string['success'] = 'Completed Successfully';
 $string['complete'] = 'Completed';
 $string['similarity'] = 'Similarity';
+$string['plagiarism_pd'] = 'PlagiarismDetector';
 
 $string['studentdisclosure'] = 'Student disclosure';
 $string['studentdisclosure_help'] = 'This text will be displayed to all students on the file upload page.';

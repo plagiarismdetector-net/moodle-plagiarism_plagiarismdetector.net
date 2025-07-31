@@ -875,7 +875,7 @@ class plagiarism_plugin_pd extends plagiarism_plugin
 
         // Check file is less than maximum allowed size.
         if ($submissiontype == 'file') {
-            if ($file->get_filesize() > PLAGIARISM_PD_MAX_FILE_UPLOAD_SIZE) {
+            if ($file->get_filesize() > plagiarism_pd_max_file_upload_size) {
                 $errorcode = 2;
             }
         }
@@ -885,7 +885,7 @@ class plagiarism_plugin_pd extends plagiarism_plugin
         if (!$acceptanyfiletype && $submissiontype == 'file') {
             $filenameparts = explode('.', $filename);
             $fileext = strtolower(end($filenameparts));
-            if (!in_array('.'.$fileext, ACCEPTED_PD_FILE_EXTS)) {
+            if (!in_array('.'.$fileext, accepted_pd_file_exts)) {
                 $errorcode = 4;
             }
         }
@@ -1185,7 +1185,7 @@ class plagiarism_plugin_pd extends plagiarism_plugin
 
         $currentdate = strtotime('now');
         $queueditems = $DB->get_records_select('plagiarism_pd_files', '(statuscode = ? OR statuscode = ?) AND duedatescan < ?  ',
-            [PLAGIARISM_PD_QUEUED_STATUS, PLAGIARISM_PD_PENDING_STATUS, $currentdate], 'lastmodified', '*', 0, PLAGIARISM_PD_CRON_SUBMISSIONS_LIMIT);
+            [plagiarism_pd_queued_status, plagiarism_pd_pending_status, $currentdate], 'lastmodified', '*', 0, plagiarism_pd_cron_submissions_limit);
 
         // Submit each file individually to pd.
         foreach ($queueditems as $queueditem) {
@@ -1390,7 +1390,7 @@ class plagiarism_plugin_pd extends plagiarism_plugin
                 $plagiarismfile->errormsg = isset($response_data->message) ? $response_data->message : null;
                 $plagiarismfile->attempt = $queueditem->attempt;
                 $plagiarismfile->externalid = $response_data->hash;
-                $plagiarismfile->reporturl = isset($response_data->report_url) ? $response_data->report_url : PLAGIARISM_PD_API_BASE_URL.'/plag/scan/mdl/report/'.$response_data->hash;
+                $plagiarismfile->reporturl = isset($response_data->report_url) ? $response_data->report_url : plagiarism_pd_api_base_url.'/plag/scan/mdl/report/'.$response_data->hash;
                 $DB->update_record('plagiarism_pd_files', $plagiarismfile);
             }
 

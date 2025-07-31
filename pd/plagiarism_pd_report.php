@@ -90,7 +90,7 @@ if (empty($moduleenabled) || empty($modulesettings['plagiarism_pd_enable'])) {
                 'srcdoc' => "<form target='_self'".
                     "method='GET'".
                     "style='display: none;'".
-                    'action='.PLAGIARISM_PD_API_BASE_URL.'/plag/scan/mdl/report/'.$externalid.'>'.
+                    'action='.plagiarism_pd_api_base_url.'/plag/scan/mdl/report/'.$externalid.'>'.
                     '</form>'.
                     "<script type='text/javascript'>".
                     'window.document.forms[0].submit();'.

@@ -27,9 +27,12 @@ The **PlagiarismDetector Moodle LMS Plugin** integrates essential plagiarism det
 - Reports are generated automatically after content submission.
 - Instructors can review scores for student submissions.
 
+## How to get credentials? 
+To get credentials for this plugin, users have to contact us [PlagiarismDetector contact us](https://plagiarismdetector.net/contact-us)
+
 ## Support & Documentation
 For support, visit:  
-🔗 [PlagiarismDetector Help Center](https://plagiarismdetector.net/contact/)  
+🔗 [PlagiarismDetector Help Center](https://plagiarismdetector.net/contact-us)  
 📧 Email: support@plagiarismdetector.net  
 
 ---

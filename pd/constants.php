@@ -26,11 +26,11 @@ if (!defined('MOODLE_INTERNAL')) {
 }
 
 // Constants.
-const PLAGIARISM_PD_MAX_FILE_UPLOAD_SIZE = 104857600;
-const PLAGIARISM_PD_CRON_SUBMISSIONS_LIMIT = 100;
-const ACCEPTED_PD_FILE_EXTS = ['.doc', '.docx', '.ppt', '.pptx', '.pps', '.ppsx',
+const plagiarism_pd_max_file_upload_size = 104857600;
+const plagiarism_pd_cron_submissions_limit = 100;
+const accepted_pd_file_exts = ['.doc', '.docx', '.ppt', '.pptx', '.pps', '.ppsx',
     '.pdf', '.txt', '.htm', '.html', '.hwp', '.odt',
     '.wpd', '.ps', '.rtf', '.xls', '.xlsx', ];
-const PLAGIARISM_PD_API_BASE_URL = 'https://plagiarismdetector.net/api';
-const PLAGIARISM_PD_PENDING_STATUS = 'pending';
-const PLAGIARISM_PD_QUEUED_STATUS = 'queued';
+const plagiarism_pd_api_base_url = 'https://plagiarismdetector.net/api';
+const plagiarism_pd_pending_status = 'pending';
+const plagiarism_pd_queued_status = 'queued';
