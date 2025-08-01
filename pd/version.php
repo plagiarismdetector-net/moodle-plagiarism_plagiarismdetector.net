@@ -25,6 +25,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2023091501; // Version number (YYYYMMDDHH)
+$plugin->version = 2023091502; // Version number (YYYYMMDDHH)
 $plugin->requires = 2018051700; // Moodle version required
 $plugin->component = 'plagiarism_pd';
