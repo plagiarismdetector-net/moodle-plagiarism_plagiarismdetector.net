@@ -885,7 +885,7 @@ class plagiarism_plugin_pd extends plagiarism_plugin
         if (!$acceptanyfiletype && $submissiontype == 'file') {
             $filenameparts = explode('.', $filename);
             $fileext = strtolower(end($filenameparts));
-            if (!in_array('.'.$fileext, accepted_pd_file_exts)) {
+            if (!in_array('.'.$fileext, plagiarism_accepted_pd_file_exts)) {
                 $errorcode = 4;
             }
         }

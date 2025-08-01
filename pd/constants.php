@@ -28,7 +28,7 @@ if (!defined('MOODLE_INTERNAL')) {
 // Constants.
 const plagiarism_pd_max_file_upload_size = 104857600;
 const plagiarism_pd_cron_submissions_limit = 100;
-const accepted_pd_file_exts = ['.doc', '.docx', '.ppt', '.pptx', '.pps', '.ppsx',
+const plagiarism_accepted_pd_file_exts = ['.doc', '.docx', '.ppt', '.pptx', '.pps', '.ppsx',
     '.pdf', '.txt', '.htm', '.html', '.hwp', '.odt',
     '.wpd', '.ps', '.rtf', '.xls', '.xlsx', ];
 const plagiarism_pd_api_base_url = 'https://plagiarismdetector.net/api';
